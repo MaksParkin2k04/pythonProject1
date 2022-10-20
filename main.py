@@ -45,17 +45,32 @@ def coefficients_null():
     print("Х может принимать любые значения")
 
 
+
+
 if __name__ == '__main__':
-    a = float(input())
-    b = float(input())
-    c = float(input())
 
-    if a == 0 and b !=0 and c !=0:
-        coefficients_null_a()
-    else:
-        if a or b or c > 0:
-            calculating_discriminant_positive()
+    val_1 = input()
+    val_2 = input()
+    val_3 = input()
 
-        if (a == 0 and b == 0 and c == 0) :
-            coefficients_null()
+    try:
+        a = int(val_1)
+        b = int(val_2)
+        c = int(val_3)
+
+        if a == 0 and b != 0 and c != 0:
+            coefficients_null_a()
+        else:
+            if a or b or c > 0:
+                calculating_discriminant_positive()
+
+            if (a == 0 and b == 0 and c == 0):
+                coefficients_null()
+
+    except ValueError:
+            print("Введены буквы. Введите число")
+
+
+
+
 
